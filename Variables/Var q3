@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int x = 10; 
+    printf("Outside block: x = %d\n", x);
+    {  
+        int y = 20; 
+        printf("Inside block 1: x = %d, y = %d\n", x, y);
+        {   
+            int z = 30;  
+            printf("Inside block 2: x = %d, y = %d, z = %d\n", x, y, z);
+        }
+    }
+    printf("Back in main: x = %d\n", x);
+    return 0;
+}

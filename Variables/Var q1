@@ -1,0 +1,17 @@
+#include <stdio.h>
+int globalVar = 10;
+void function1() {
+    printf("Function 1: globalVar = %d\n", globalVar);
+    globalVar += 5;  
+}
+void function2() {
+    printf("Function 2: globalVar = %d\n", globalVar);
+    globalVar *= 2; 
+}
+int main() {
+    printf("Main: globalVar = %d\n", globalVar);
+    function1();  
+    function2();  
+    printf("Main (after functions): globalVar = %d\n", globalVar);
+    return 0;
+}
